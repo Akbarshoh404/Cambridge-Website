@@ -1,0 +1,148 @@
+footer {
+  width: 100%;
+  margin-top: 100px;
+  padding: 100px;
+  background: linear-gradient(87.72deg, #314085 2.12%, #00a6e8 98.98%);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+
+    img {
+      align-self: center;
+    }
+
+    ul {
+      list-style: none !important;
+      li {
+        list-style: none !important;
+        color: white !important;
+      }
+
+      div {
+        padding-top: 20px;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+}
+
+#footer_p1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+#footer_p2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  transition: 1s;
+  padding-top: 20px;
+}
+
+#footer_ij {
+  display: none;
+  padding-top: 50px;
+}
+
+@media only screen and (max-width: 1700px) {
+  #footer_p1 {
+    font-size: 25px;
+  }
+
+  #footer_p2 {
+    font-size: 20px;
+  }
+
+  #footer_none {
+    display: none;
+  }
+
+  #footer_ij {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #footer_none {
+    display: block;
+  }
+
+  #footer_ij {
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+    .container {
+      padding: 0px 0px;
+      width: 100% !important;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+
+      ul {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #footer_p1 {
+    font-size: 20px;
+  }
+
+  #footer_p2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  footer .container img {
+    width: 75%;
+  }
+
+  footer .container {
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #footer_p1 {
+    font-size: 16px;
+  }
+
+  #footer_p2 {
+    font-size: 14px;
+  }
+
+  footer{
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  footer{
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

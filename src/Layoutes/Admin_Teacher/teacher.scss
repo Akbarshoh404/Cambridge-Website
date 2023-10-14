@@ -1,0 +1,136 @@
+#teacher_inputs {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 50px;
+
+  input {
+    width: 500px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 10px;
+    border: 3px solid #23c483;
+  }
+
+  button {
+    cursor: pointer;
+    // position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    color: white !important;
+  }
+
+  button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+    background-color: rgb(193, 163, 98);
+  }
+}
+
+#teacher_map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#teacher_card {
+  margin: auto;
+  width: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #23c483;
+  gap: 5px;
+  padding: 30px;
+  img {
+    width: 70%;
+    margin: auto;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    color: white !important;
+  }
+}
+
+#admin_change_button {
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #23c483;
+  color: white !important;
+  font-size: 20px;
+}
+
+#admin_delete_button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: brown;
+  color: white !important;
+}
+
+@media only screen and (max-width: 900px) {
+  #teacher_map {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  #teacher_card{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #teacher_map {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  #teacher_card{
+    width: 100%;
+  }
+
+  #teacher_inputs{
+    input{
+      width: 400px;
+      margin: auto;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  #teacher_inputs{
+    input{
+      width: 350px;
+      margin: auto;
+    }
+  }
+}
+
+#teacher_text{
+  color: white !important;
+  font-size: 30px;
+  text-align: center;
+}

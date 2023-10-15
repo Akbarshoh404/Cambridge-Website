@@ -27,7 +27,6 @@ const Team = () => {
   console.log(courseData);
   console.log(teacherData);
   useEffect(() => {
-    getCoursesApi();
     getTeachersApi();
   }, []);
   return (

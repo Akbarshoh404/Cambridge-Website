@@ -4,6 +4,8 @@ import logo from "../../Images/logo.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+// import logo from "../../API/logo.png"
+
 const Footer = () => {
   const { t, i18n } = useTranslation();
 
@@ -11,7 +13,7 @@ const Footer = () => {
     <>
       <footer>
         <div className="container">
-          <img src="https://cambridgeonline.uz/_nuxt/img/Frame.09a21ae.svg" />
+          <img src={logo} />
           <ul>
             <li id="footer_p1">{t("footer_p1")}</li>
             <Link to="/team">

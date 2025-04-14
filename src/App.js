@@ -16,7 +16,7 @@ function App() {
         <Route path="/course" element={<Course />} />
         <Route path="/team" element={<Team />} />
         <Route path="/admin" element={<Admin_Login />} />
-        <Route path="/yebanutiygandon" element={<Admin />} />
+        <Route path="/admin-profile" element={<Admin />} />
         <Route path="/admin-teacher" element={<AdminTeacher />} />
         <Route path="/admin-application" element={<AdminApp />} />
         <Route path="course/:category" element={<Aplication/>}/>

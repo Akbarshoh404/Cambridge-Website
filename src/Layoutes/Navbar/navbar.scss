@@ -36,9 +36,14 @@ nav {
       display: flex;
       align-items: center;
       gap: 50px;
+
       img {
         padding-top: 10px;
         padding-right: 30px;
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        object-fit: contain;
       }
 
       p {
@@ -52,6 +57,7 @@ nav {
     div:last-child {
       display: flex;
       gap: 20px;
+
       .btn1 {
         font-weight: 500;
         font-size: 20px;
@@ -131,19 +137,18 @@ nav {
   }
 }
 
-
 @media only screen and (max-width: 700px) {
-  .nav_drop{
+  .nav_drop {
     display: none !important;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  #nav_logo{
-    width: 75px !important;
+  nav .container div:first-child img {
+    width: 130px;
   }
 
-  #nav{
+  #nav {
     .container {
       justify-content: center;
       gap: 30px;

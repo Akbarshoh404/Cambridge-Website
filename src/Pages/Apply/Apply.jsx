@@ -3,19 +3,17 @@ import "./apply.scss";
 import { useParams } from "react-router-dom";
 import { data } from "../../API/Course_data";
 import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Nav from "../../Layoutes/Navbar/Navbar";
 import toast, { Toaster } from "react-hot-toast";
+import logo from "../../API/logo.png";
+import img from "../../API/img.png";
 
 const Apply = () => {
   const { category } = useParams();
-
   const [name, setName] = useState("");
   const [surName, setSurName] = useState("");
   const [phone, setPhone] = useState("");
-
-  console.log(category);
 
   const PostRequest = async () => {
     await axios
@@ -25,17 +23,16 @@ const Apply = () => {
         student_surname: surName,
         student_phone_number: phone,
       })
-      .then(function () {
+      .then(() => {
         window.location.reload();
-        console.log("Success");
-        notify();
+        notify("Success");
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
   };
-  const notify = (obj) => toast(obj);
-  
+
+  const notify = (message) => toast(message);
 
   return (
     <>
@@ -45,27 +42,16 @@ const Apply = () => {
           <p id="apply_p1">
             The first Hybrid Education Language Center in Uzbekistan!
           </p>
-
           <p id="apply_p2">
             Join our training center and achieve high results with our new
             Hybrid Education system!
           </p>
-
-          <img
-            src="https://cambridgeonline.uz/_nuxt/img/registration.2f0f7a0.png"
-            alt=""
-            id="apply_img1"
-          />
+          <img src={img} alt="Hybrid Education" id="apply_img1" />
         </div>
-
         <div id="apply_div2">
-          <img
-            src="https://cambridgeonline.uz/_nuxt/img/logo-light.7c9d4f9.svg"
-            alt=""
-          />
+          <img src={logo} alt="Cambridge LC Logo" id="apply_logo" />
           <p id="apply_p3">Welcome to Cambridge LC.</p>
-          <p id="apply_p4">Регистрация </p>
-
+          <p id="apply_p4">Регистрация</p>
           <input
             type="text"
             placeholder="Name:"
@@ -84,20 +70,15 @@ const Apply = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
-
           <button
             onClick={() => {
-              if (name.length >= 1) {
-                if (surName.length >= 1) {
-                  if (phone.length >= 1) {
-                    notify("Succes");
-                    PostRequest();
-                  } else {
-                    notify("Please write all your information !!!");
-                  }
-                } else {
-                  notify("Please write all your information !!!");
-                }
+              if (
+                name.length >= 1 &&
+                surName.length >= 1 &&
+                phone.length >= 1
+              ) {
+                notify("Success");
+                PostRequest();
               } else {
                 notify("Please write all your information !!!");
               }
